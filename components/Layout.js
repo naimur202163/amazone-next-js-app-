@@ -19,6 +19,7 @@ export default function Layout({ children }) {
       <footer className={classes.footer}>
         All right reseverd next amazone App
       </footer>
+      {/* 32Min */}
     </div>
   );
 }
