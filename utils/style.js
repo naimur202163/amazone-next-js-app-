@@ -5,6 +5,10 @@ const useStyles = makeStyles({
     backgroundColor: '#203040',
   },
   '& a': { color: '#fff', marginLeft: 10 },
+  main: { minHeight: '80vh' },
+  footer: {
+    textAlign: 'center',
+  },
 });
 
 export default useStyles;

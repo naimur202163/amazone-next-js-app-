@@ -15,8 +15,10 @@ export default function Layout({ children }) {
           <Typography>Amazona</Typography>
         </Toolbar>
       </AppBar>
-      <Container>{children}</Container>
-      <footer>All right reseverd next amazone App</footer>
+      <Container className={classes.main}>{children}</Container>
+      <footer className={classes.footer}>
+        All right reseverd next amazone App
+      </footer>
     </div>
   );
 }
