@@ -14,6 +14,8 @@ import NextLink from 'next/link';
 import useStyles from '../utils/style';
 import { createMuiTheme } from '@mui/material';
 export default function Layout({ title, children, description }) {
+  const classes = useStyles();
+
   const theme = createMuiTheme({
     typography: {
       h1: {
@@ -26,22 +28,21 @@ export default function Layout({ title, children, description }) {
         fontWeight: 400,
         margin: '1rem 0',
       },
-      palette: {
-        type: 'light',
-        primary: {
-          main: '#f0c000',
-        },
-        secondary: {
-          main: '#208080',
-        },
+    },
+    palette: {
+      type: 'light',
+      primary: {
+        main: '#f0c000',
+      },
+      secondary: {
+        main: '#208080',
       },
     },
   });
-  const classes = useStyles();
   return (
     <div>
       <Head>
-        <title> {title ? `${title}-Next Amazone` : 'Next Amazona'}</title>
+        <title>{title ? `${title} - Next Amazona` : 'Next Amazona'}</title>
         {description && <meta name="description" content={description}></meta>}
       </Head>
       <ThemeProvider theme={theme}>
