@@ -10,12 +10,12 @@ import {
 import NextLink from 'next/link';
 
 import useStyles from '../utils/style';
-export default function Layout({ children }) {
+export default function Layout({ title, children }) {
   const classes = useStyles();
   return (
     <div>
       <Head>
-        <title>Next Amazone APP</title>
+        <title> {title ? `${title}-Next Amazone` : 'Next Amazona'}</title>
       </Head>
       {/* Header */}
       <AppBar position="static" className={classes.navbar}>
