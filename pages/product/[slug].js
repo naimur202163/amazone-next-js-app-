@@ -26,9 +26,9 @@ const ProdcutScreen = () => {
   return (
     <Layout title={product.name} description={product.description}>
       <div className={classes.section}>
-        <NextLink href="/" passHerf>
+        <NextLink href="/" passHref>
           <Link>
-            <Typography> Back to classes</Typography>
+            <Typography>back to products</Typography>
           </Link>
         </NextLink>
       </div>
@@ -45,20 +45,17 @@ const ProdcutScreen = () => {
         <Grid item md={3} xs={12}>
           <List>
             <ListItem>
-              <Typography component="h1" variant="h1">
-                {product.name}
-              </Typography>
+              <Typography component="h1">{product.name}</Typography>
             </ListItem>
             <ListItem>
-              <Typography>Category:{product.category}</Typography>
+              <Typography>Category: {product.category}</Typography>
             </ListItem>
             <ListItem>
-              <Typography> Brand:{product.brand}</Typography>
+              <Typography>Brand: {product.brand}</Typography>
             </ListItem>
             <ListItem>
               <Typography>
-                {' '}
-                Rating:{product.rating} Star ({product.numReviews}Reviews)
+                Rating: {product.rating} stars ({product.numReviews} reviews)
               </Typography>
             </ListItem>
             <ListItem>
@@ -72,7 +69,7 @@ const ProdcutScreen = () => {
               <ListItem>
                 <Grid container>
                   <Grid item xs={6}>
-                    <Typography>Price:</Typography>
+                    <Typography>Price</Typography>
                   </Grid>
                   <Grid item xs={6}>
                     <Typography>${product.price}</Typography>
@@ -82,18 +79,18 @@ const ProdcutScreen = () => {
               <ListItem>
                 <Grid container>
                   <Grid item xs={6}>
-                    <Typography>Status:</Typography>
+                    <Typography>Status</Typography>
                   </Grid>
                   <Grid item xs={6}>
                     <Typography>
-                      {product.countInStock > 0 ? 'in Stock' : 'not in stock'}
+                      {product.countInStock > 0 ? 'In stock' : 'Unavailable'}
                     </Typography>
                   </Grid>
                 </Grid>
               </ListItem>
               <ListItem>
                 <Button fullWidth variant="contained" color="primary">
-                  Add to Cart
+                  Add to cart
                 </Button>
               </ListItem>
             </List>
