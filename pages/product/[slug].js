@@ -24,11 +24,11 @@ const ProdcutScreen = () => {
     return <div>Product Not Found</div>;
   }
   return (
-    <Layout title={product.name}>
+    <Layout title={product.name} description={product.description}>
       <div className={classes.section}>
         <NextLink href="/" passHerf>
           <Link>
-            <Typography> ack to classes</Typography>
+            <Typography> Back to classes</Typography>
           </Link>
         </NextLink>
       </div>
@@ -45,7 +45,7 @@ const ProdcutScreen = () => {
         <Grid item md={3} xs={12}>
           <List>
             <ListItem>
-              <Typography>Product:{product.name}</Typography>
+              <Typography component="h1">Product:{product.name}</Typography>
             </ListItem>
             <ListItem>
               <Typography>Category:{product.category}</Typography>
