@@ -14,11 +14,7 @@ const ProdcutScreen = () => {
   }
   return (
     <div>
-      <Layout title="product">
-        <NextLink>
-          <Link>Back to the products</Link>
-        </NextLink>
-      </Layout>
+      <h1>{product.name}</h1>
     </div>
   );
 };
