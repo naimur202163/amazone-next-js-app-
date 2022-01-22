@@ -9,7 +9,6 @@ import {
   Typography,
 } from '@material-ui/core';
 import Layout from '../components/Layout';
-import styles from '../styles/Home.module.css';
 import data from '../utils/data';
 import NextLink from 'next/link';
 export default function Home({ children }) {
